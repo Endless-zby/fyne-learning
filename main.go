@@ -67,5 +67,5 @@ func initWindowSetting(myApp fyne.App, mainWindow fyne.Window) {
 		mainWindow.SetIcon(iconResource)
 	}
 	myApp.Settings().SetTheme(theme.DefaultTheme())
-	mainWindow.Resize(fyne.NewSize(800, 600))
+	//mainWindow.Resize(fyne.NewSize(800, 600))
 }
