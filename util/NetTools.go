@@ -16,8 +16,8 @@ func InitMessageConnect(carConfig config.CarConfig) error {
 		buffer.WriteString(":")
 		buffer.WriteString(carConfig.Port)
 		// 创建 UDP 连接
-		MessageConnect, err := net.Dial("udp", buffer.String())
-		Connect = MessageConnect
+		conn, err := net.Dial("udp", buffer.String())
+		Connect = conn
 		if err != nil {
 			return err
 		}

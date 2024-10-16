@@ -29,7 +29,7 @@ func main() {
 		container.NewTabItemWithIcon("首页1", theme.HomeIcon(), homepage.MakeHomePage(myApp, mainWindow)), // 首页
 		container.NewTabItemWithIcon("测试2", theme.ComputerIcon(), homepage.Page2(myApp, mainWindow)),
 		container.NewTabItemWithIcon("测试3", theme.ContentPasteIcon(), homepage.Page3(mainWindow)),
-		container.NewTabItemWithIcon("测试4", theme.MailSendIcon(), widget.NewLabel("测试3")),
+		container.NewTabItemWithIcon("测试4", theme.MailSendIcon(), homepage.Page4(mainWindow)),
 		container.NewTabItem("标签 1", widget.NewLabel("你好")),
 	)
 	tabs.Append(container.NewTabItem("标签 2", widget.NewLabel("你好")))
