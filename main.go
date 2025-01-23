@@ -12,8 +12,9 @@ import (
 )
 
 func main() {
-
-	myApp := app.New()
+	// 检查下开机启动
+	util.CheckAutoRun()
+	myApp := app.NewWithID("com.byzhao.app")
 	mainWindow := myApp.NewWindow("小车控制器")
 
 	initWindowSetting(myApp, mainWindow)
@@ -61,6 +62,7 @@ func tidyUp() {
 // 初始化master窗口
 func initWindowSetting(myApp fyne.App, mainWindow fyne.Window) {
 	iconResource, err := fyne.LoadResourceFromPath("Icon.png")
+	myApp.SetIcon(iconResource)
 	if err != nil {
 		fyne.LogError("Could not load icon", err)
 	} else {
